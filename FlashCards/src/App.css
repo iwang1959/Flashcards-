@@ -1,0 +1,102 @@
+/* Apply a simple reset to remove default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("/src/assets/pokemonBG.png");
+  background-size: cover; /* Scale the image to cover the entire element */
+  color: #333;
+  display: flex; /* Make body a flex container */
+  flex-direction: column; /* Allow for vertical stacking of content */
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  background-position: center; /* Center the image within the element */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  height: 100vh; /* Optional: Makes the container fill the full height of the viewport */
+}
+
+
+/* Full-page container */
+.full-page {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  text-align: center;
+  background-image: url("/src/assets/pokemonBG.png");
+
+}
+
+/* container styles */
+.container {
+  color: white;
+  text-align: center;
+  margin: 0 auto 20px; /* Center the header horizontally and add space below */
+  font-size: 36px; /* Make text larger */
+  margin-top: 200px;
+}
+
+/* Customize h1 and h2 */
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: lilac;
+  text-align: center; /* Center the text horizontally */
+}
+
+h2 {
+  font-size: 18px;
+  color: lilac;
+  text-align: center; /* Center the text horizontally */
+}
+
+/* Optional: Add some styles for content within the full-page */
+.content {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.card-set {
+  text-align: center;
+  width: 80%; /* Adjust the width of the card set */
+  max-width: 1000px; /* Max width for the card set */
+  margin: 0 auto; /* Center the card set */
+  margin-top: 100px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 30px; /* Increase padding for larger cards */
+  margin: 20px auto; /* Center the card and add spacing */
+  cursor: pointer;
+  width: 1000px; /* Set a fixed width for each card */
+  height: 200px;
+  max-width: 90%; /* Allow for some flexibility in card size */
+  box-sizing: border-box; /* Make sure padding doesn't affect width */
+  background-color: #ccc;
+  border-radius: 15px;
+  text-align: center;
+}
+
+
+button {
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+

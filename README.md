@@ -15,3 +15,6 @@ If you are developing a production application, we recommend using TypeScript an
 
 
 [![Loom Video Thumbnail](https://github.com/iwang1959/Flashcards-/blob/main/image.png)]([(https://www.loom.com/share/03d6b5b8fb7443d4b762b95f000a1517)])
+
+
+[Watch the Loom video here]([(https://www.loom.com/share/03d6b5b8fb7443d4b762b95f000a1517)])

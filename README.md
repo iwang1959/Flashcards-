@@ -13,9 +13,20 @@ Currently, two official plugins are available:
 
 If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
-[Watch the Loom video here]([(https://www.loom.com/share/03d6b5b8fb7443d4b762b95f000a1517)])
 
-[![Loom Video Thumbnail](https://github.com/iwang1959/Flashcards-/blob/main/image.png)]([(https://www.loom.com/share/03d6b5b8fb7443d4b762b95f000a1517)])
-
-
-<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/03d6b5b8fb7443d4b762b95f000a1517?sid=03a0b839-0733-492c-8282-b00c1b09267a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loom Video</title>
+</head>
+<body>
+    <div style="position: relative; padding-bottom: 62.5%; height: 0;">
+        <iframe src="https://www.loom.com/embed/03d6b5b8fb7443d4b762b95f000a1517?sid=03a0b839-0733-492c-8282-b00c1b09267a"
+            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </iframe>
+    </div>
+</body>
+</html>

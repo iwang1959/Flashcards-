@@ -1,6 +1,8 @@
 import React, { useState , useRef } from 'react';
 import "./App.css"; // Import the CSS file for styling
 import song from './assets/opening.mp3';
+import LoadingScreen from "./LoadingScreen";
+
 
 
 
@@ -27,11 +29,18 @@ function MusicPlayer() {
 }
 
 
+
+
+
+
+
+
+
 const Card = ({ card, showAnswer, toggleAnswer }) => {
   return (
     <div className="card" onClick={toggleAnswer}>
       <div className="card-content">
-        <h3>{showAnswer ? card.answer : card.question}</h3>
+        <h3>{showAnswer ? `Answer: ${card.answer}` : `Question: ${card.question}`}</h3>
       </div>
     </div>
   );
@@ -60,15 +69,31 @@ const CardSet = () => {
 
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
+  const [userGuess, setUserGuess] = useState("");
+  const [feedback, setFeedback] = useState(null);
 
   const handleNextCard = () => {
-    const randomIndex = Math.floor(Math.random() * cardPairs.length);
-    setCurrentCardIndex(randomIndex);
+    setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cardPairs.length);
     setShowAnswer(false); // Reset to question view for next card
   };
 
   const toggleAnswer = () => {
     setShowAnswer(!showAnswer); // Toggle the showAnswer state
+  };
+
+
+  const checkAnswer = () => {
+    if (userGuess.trim().toLowerCase() === cardPairs[currentCardIndex].answer.toLowerCase()) {
+      setFeedback("✅ Correct!");
+    } else {
+      setFeedback("❌ Incorrect. Try again!");
+    }
+  };
+
+  const resetState = () => {
+    setShowAnswer(false);
+    setUserGuess("");
+    setFeedback(null);
   };
 
   return (
@@ -78,12 +103,39 @@ const CardSet = () => {
         showAnswer={showAnswer} 
         toggleAnswer={toggleAnswer}
       />
-      <button onClick={handleNextCard}>Next Card</button>
+      
+      <input
+        type="text"
+        value={userGuess}
+        onChange={(e) => setUserGuess(e.target.value)}
+        placeholder="Enter your guess"
+      />
+      <button class='newButton' onClick={checkAnswer}>Submit</button>
+      <button class="newButton" onClick={handleNextCard}>Next Card</button>
+      <br></br>
+      {feedback && <p>{feedback}</p>}
+
     </div>
   );
 };
 
 function App() {
+
+  /*
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
+  */
+
   return (
     <div className="App">
       <MusicPlayer></MusicPlayer>
@@ -93,5 +145,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

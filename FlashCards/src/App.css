@@ -100,3 +100,14 @@ button:hover {
   background-color: #f0f0f0;
 }
 
+.newButton {
+  margin: 5px;
+  padding: 10px;
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
